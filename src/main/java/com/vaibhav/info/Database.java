@@ -100,13 +100,13 @@ public class Database {
 	
 	public static boolean updateBalance(String email, String amount) {
 		Connection con = Database.create();
-		System.out.println(email +"," + amount);
+		//System.out.println(email +"," + amount);
 		try {
 			String get_balance = Database.giveBalance(email);
 			Long bal_inital = Long.parseLong(get_balance);
 			Long amount_credit = Long.parseLong(amount);
 			Long bal_updated = bal_inital + amount_credit;
-			System.out.println(bal_updated);
+			//System.out.println(bal_updated);
 			PreparedStatement ps = con.prepareStatement("update user set balance = ? where email = ?");
 			ps.setString(1,bal_updated+"");
 			ps.setString(2,email);
@@ -118,9 +118,9 @@ public class Database {
 		 //   System.out.println("After formatting: " + formattedDate);
 			String value = "amount credited " +amount +"rs at "+formattedDate;
 			if(transctions(email,value)) {
-				System.out.println("transctions successfull");
+				//System.out.println("transctions successfull");
 			}else {
-				System.out.println("transctions unsuccessfull");
+				//System.out.println("transctions unsuccessfull");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -190,7 +190,7 @@ public class Database {
 		// TODO Auto-generated method stub
 		
 		Connection con = Database.create();
-		System.out.println(email +"," + amount);
+		//System.out.println(email +"," + amount);
 		try {
 			String get_balance = Database.giveBalance(email);
 			Long bal_inital = Long.parseLong(get_balance);
@@ -199,7 +199,7 @@ public class Database {
 				return false;
 			}
 			Long bal_updated = bal_inital - amount_debit;
-			System.out.println(bal_updated);
+			//System.out.println(bal_updated);
 			PreparedStatement ps = con.prepareStatement("update user set balance = ? where email = ?");
 			ps.setString(1,bal_updated+"");
 			ps.setString(2,email);
@@ -211,9 +211,9 @@ public class Database {
 		 //   System.out.println("After formatting: " + formattedDate);
 			String value = "amount debited " +amount +"rs at "+formattedDate;
 			if(transctions(email,value)) {
-				System.out.println("transctions successfull");
+				//System.out.println("transctions successfull");
 			}else {
-				System.out.println("transctions unsuccessfull");
+				//System.out.println("transctions unsuccessfull");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

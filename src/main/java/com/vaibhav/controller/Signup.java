@@ -38,7 +38,7 @@ public class Signup extends HttpServlet {
 		
 		Database db = new Database();
 		if(db.save(user)) {
-			out.print("good to go");
+			response.sendRedirect("login.jsp");
 		}else {
 			out.print("email aleready exist try login");
 		}

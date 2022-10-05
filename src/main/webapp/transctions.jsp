@@ -21,7 +21,10 @@ for(int i = trans.size()-1;i>=0;i--){
 //for(int i=0;i<trans.size();i++){
 	out.print(trans.get(i));
 	out.print("<br>");
+
 }
+out.print("<br>");
+out.print("<a href='home.jsp'>click here</a>");
 %>
 
 </body>

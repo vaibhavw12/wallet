@@ -27,8 +27,12 @@ public class Credit extends HttpServlet {
 		//System.out.println(amount + "," + email);
 		if(Database.updateBalance(email,amount)) {
 			out.print("amount credited successfully");
+			out.print("<br>");
+			out.print("<a href='home.jsp'>click here</a>");
 		}else {
-			out.println("transction denied");
+			out.print("transction denied");
+			out.print("<br>");
+			out.print("<a href='home.jsp'>click here</a>");
 		}
 		
 	}

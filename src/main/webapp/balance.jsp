@@ -15,9 +15,11 @@ if((session.getAttribute("email")==null)){
 <%
 HttpSession session_1 = request.getSession();
 String email =(String) session.getAttribute("email");
-System.out.println(email+" bal");
+//System.out.println(email+" bal");
 String balance = Database.giveBalance(email);
 out.print(balance);
+out.print("<br>");
+out.print("<a href='home.jsp'>click here</a>");
 %>
 </body>
 </html>
