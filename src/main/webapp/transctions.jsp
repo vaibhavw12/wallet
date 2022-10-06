@@ -17,6 +17,7 @@ HttpSession session_2 = request.getSession();
 String email =(String) session.getAttribute("email");
 //System.out.println(email+" bal");
 ArrayList<String> trans = Database.printTranctions(email);
+out.print("<h1 style='text-align:center;padding-top:50px'>");
 for(int i = trans.size()-1;i>=0;i--){
 //for(int i=0;i<trans.size();i++){
 	out.print(trans.get(i));
@@ -25,6 +26,7 @@ for(int i = trans.size()-1;i>=0;i--){
 }
 out.print("<br>");
 out.print("<a href='home.jsp'>click here</a>");
+out.print("</h1>");
 %>
 
 </body>

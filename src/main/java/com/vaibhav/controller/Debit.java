@@ -27,13 +27,17 @@ public class Debit extends HttpServlet {
 		String email = (String) session.getAttribute("email");
 		//System.out.println(amount + "," + email);
 		if(Database.debitBalance(email,amount)) {
+			out.print("<h1 style='text-align:center;padding-top:50px'>");
 			out.print("amount debited successfully");
 			out.print("<br>");
 			out.print("<a href='home.jsp'>click here</a>");
+			out.print("</h1>");
 		}else {
+			out.print("<h1 style='text-align:center;padding-top:50px'>");
 			out.println("transction denied");
 			out.print("<br>");
 			out.print("<a href='home.jsp'>click here</a>");
+			out.print("</h1>");
 		}
 		
 	}

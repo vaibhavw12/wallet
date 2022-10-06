@@ -18,9 +18,11 @@ String email =(String) session.getAttribute("email");
 //System.out.println(email+" bal");
 
 %>
-<h3>do you want to log out ?</h3>
 <form action="Logout" method="post">
+<h1 style='text-align:center;padding-top:50px'>
+do you want to log out ?<br>
 <button type="submit">Logout</button>
+</h1>
 </form>
 </body>
 </html>

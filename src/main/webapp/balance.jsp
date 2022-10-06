@@ -17,9 +17,11 @@ HttpSession session_1 = request.getSession();
 String email =(String) session.getAttribute("email");
 //System.out.println(email+" bal");
 String balance = Database.giveBalance(email);
+out.print("<h1 style='text-align:center;padding-top:150px'>");
 out.print(balance);
 out.print("<br>");
 out.print("<a href='home.jsp'>click here</a>");
+out.print("</h1>");
 %>
 </body>
 </html>
